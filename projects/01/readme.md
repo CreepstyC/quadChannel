@@ -1,7 +1,7 @@
 # Desarrollo
 
 ## Nand
-La compueta Nand está creada de manera nativa en las herramientas de nand2tetris, por lo cuál se usar para crear las siguientes compuertas progresivamente.
+La compuerta Nand está creada de manera nativa en las herramientas de nand2tetris, por lo cuál se usar para crear las siguientes compuertas progresivamente.
 
 <p align="center">
 <img src="https://www.build-electronic-circuits.com/wp-content/uploads/2022/09/Truth-table-NAND-gate-417x500.png" width="200">
