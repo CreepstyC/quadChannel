@@ -10,5 +10,4 @@ Este repositorio contiene las prácticas relacionadas con la materia de Arquitec
 - [@andr3sit011](https://github.com/%20andr3sit011e)
 
   ## 🔗 Página web
- [QuadChannel](https://sites.google.com/view/
-quadchannel)
+ [QuadChannel](https://sites.google.com/view/quadchannel)
