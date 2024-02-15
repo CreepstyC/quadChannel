@@ -215,7 +215,7 @@ CHIP Or8Way {
 </p>
 
 ## Mux4Way16:
-Un multiplexor con \textit{m} vías y \textit{n} bits permite seleccionar una de varias entradas de datos y dirigirla a una salida en función del selector. En este caso el multiplexor cuenta con 4 entradas, cada una de ellas con 16 bits.
+Un multiplexor con } vías y n bits permite seleccionar una de varias entradas de datos y dirigirla a una salida en función del selector. En este caso el multiplexor cuenta con 4 entradas, cada una de ellas con 16 bits.
 ```
 CHIP Mux4Way16 {
     IN a[16], b[16], c[16], d[16], sel[2];
