@@ -218,11 +218,11 @@ CHIP Or8Way {
 
 ### 1. ¿Qué consideraciones importantes debe tener en cuenta para trabajar con nand2tetris?
 
-1. Entender los fundamentos: Nand2Tetris es un curso que te lleva a través de la creación de una computadora desde cero. Por lo tanto, es crucial tener una comprensión sólida de los fundamentos de la ingeniería informática, lógica booleana y el funcionamiento de diferentes compuertas lógicas, primordialmente And, Or y Not.
+- Entender los fundamentos: Nand2Tetris es un curso que te lleva a través de la creación de una computadora desde cero. Por lo tanto, es crucial tener una comprensión sólida de los fundamentos de la ingeniería informática, lógica booleana y el funcionamiento de diferentes compuertas lógicas, primordialmente And, Or y Not.
 
-2. Habilidades de resolución de problemas: A lo largo del curso, te encontrarás con varios desafíos y problemas que requerirán habilidades de resolución de problemas y pensamiento crítico.
+- Habilidades de resolución de problemas: A lo largo del curso, te encontrarás con varios desafíos y problemas que requerirán habilidades de resolución de problemas y pensamiento crítico.
 
-3. Aprendizaje autodirigido: Nand2Tetris es en gran medida un curso de aprendizaje autodirigido. Necesitarás la capacidad de aprender de manera independiente y buscar recursos adicionales cuando sea necesario.
+- Aprendizaje autodirigido: Nand2Tetris es en gran medida un curso de aprendizaje autodirigido. Necesitarás la capacidad de aprender de manera independiente y buscar recursos adicionales cuando sea necesario.
 
 ### 2. ¿Qué otras herramientas similares a Nand2Tetris existen? (De mínimo dos ejemplos)
 
