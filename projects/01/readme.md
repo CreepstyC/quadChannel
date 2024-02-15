@@ -211,4 +211,3 @@ CHIP Or8Way {
   <img src="https://nand2tetris-hdl.github.io/img/or8.png" width="250">
 </p>
 
-```
