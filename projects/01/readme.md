@@ -214,6 +214,36 @@ CHIP Or8Way {
   <img src="https://nand2tetris-hdl.github.io/img/or8.png" width="350">
 </p>
 
+## Mux4Way16:
+Un multiplexor con \textit{m} vías y \textit{n} bits permite seleccionar una de varias entradas de datos y dirigirla a una salida en función del selector. En este caso el multiplexor cuenta con 4 entradas, cada una de ellas con 16 bits.
+```
+CHIP Mux4Way16 {
+    IN a[16], b[16], c[16], d[16], sel[2];
+    OUT out[16];
+    
+    PARTS:
+    	Mux16(a=a, b=b, sel=sel[0], out= ab);
+	Mux16(a=c, b=d, sel=[0], out=cd);
+	Mux16(a=ab, b=cd, sel=sel[1], out=out);
+}
+```
+## Mux8Way16:
+Un chip Mux8Way16 tiene un funcionamiento similar al Mux4Way16, solo que este cuenta con el doble de entradas con la misma cantidad de bits para cada una.
+```
+CHIP Mux8Way16 {
+    IN a[16], b[16], c[16], d[16],
+       e[16], f[16], g[16], h[16],
+       sel[3];
+    OUT out[16];
+
+    PARTS:
+    Mux16(a=a, b=b, c=c, d=d, sel=sel[0..1], out=abcd);
+    Mux16(a=e, b=f, c=g, d=h, sel=sel[0..1], out=efgh);
+    Mux16(a=abcd, b=efgh, sel=sel[2], out=out);
+}
+```
+
+
 ## Preguntas adicioinales
 
 ### 1. ¿Qué consideraciones importantes debe tener en cuenta para trabajar con nand2tetris?
