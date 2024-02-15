@@ -2,6 +2,7 @@
 
 En este proyecto se realiza la construcción de un conjunto de compuertas lógicas que nos ayudarán mas adelante en la construcción de otros componentes importantes que conforman la estructura de un computador.
 
+
 ## Nand
 La compuerta Nand está creada de manera nativa en las herramientas de nand2tetris, por lo cuál se usar para crear las siguientes compuertas progresivamente.
 
@@ -235,3 +236,8 @@ CHIP Or8Way {
 [The elements of computing systems](https://www.nand2tetris.org/book)
 
 [Apéndice 2: Guía HDL](https://drive.google.com/file/d/1dPj4XNby9iuAs-47U9k3xtYy9hJ-ET0T/view?usp=sharing)
+------> Click en la imagen para mejor visualización <------
+<p align="center" style="background-color: white;">
+  <img src="https://nand2tetris-hdl.github.io/img/or8.png" width="250">
+</p>
+
