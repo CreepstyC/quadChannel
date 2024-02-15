@@ -207,6 +207,7 @@ CHIP Or8Way {
     Or(a=o6, b=in[7], out=out);
 }
 ```
+------> Click en la imagen para mejor visualización <------
 <p align="center" style="background-color: white;">
   <img src="https://nand2tetris-hdl.github.io/img/or8.png" width="250">
 </p>
