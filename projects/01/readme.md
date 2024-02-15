@@ -1,5 +1,8 @@
 # Desarrollo
 
+En este proyecto se realiza la construcción de un conjunto de compuertas lógicas que nos ayudarán mas adelante en la construcción de otros componentes importantes que conforman la estructura de un computador.
+
+
 ## Nand
 La compuerta Nand está creada de manera nativa en las herramientas de nand2tetris, por lo cuál se usar para crear las siguientes compuertas progresivamente.
 
