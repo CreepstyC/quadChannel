@@ -215,7 +215,7 @@ CHIP Or8Way {
 </p>
 
 ## Mux4Way16:
-Un multiplexor con } vías y n bits permite seleccionar una de varias entradas de datos y dirigirla a una salida en función del selector. En este caso el multiplexor cuenta con 4 entradas, cada una de ellas con 16 bits.
+Un multiplexor con m vías y n bits permite seleccionar una de varias entradas de datos y dirigirla a una salida en función del selector. En este caso el multiplexor cuenta con 4 entradas, cada una de ellas con 16 bits.
 ```
 CHIP Mux4Way16 {
     IN a[16], b[16], c[16], d[16], sel[2];
@@ -242,7 +242,32 @@ CHIP Mux8Way16 {
     Mux16(a=abcd, b=efgh, sel=sel[2], out=out);
 }
 ```
+## DMux4Way:
+Un demultiplexor de m vías funciona de manera contraria a como lo hace un multiplexor de m vías, ya que el demultiplexor se encarga de tomar una entrada y distribuirla en una de las m salidas posibles.
+```
+CHIP DMux4Way {
+    IN in, sel[2];
+    OUT a, b, c, d;
 
+    PARTS:
+	DMux(in=in,sel=sel[1],a=ab,b=cd);
+	DMux(in=ao,sel=sel[0],a=a,b=b);
+	DMux(in=bo,sel=sel[0],a=c,b=d);
+}
+```
+## DMux8Way:
+Funciona de la misma forma que un DMux4Way, solo que este distribuye una entrada en 8 posibles salidas en lugar de 4.
+```
+CHIP DMux8Way {
+    IN in, sel[3];
+    OUT a, b, c, d, e, f, g, h;
+
+    PARTS:
+    DMux(in=in, sel=sel[2], a=abcd, b=efgh);
+    DMux4Way(in=abcd, sel=sel[0..1], a=a, b=b, c=c, d=d);
+    DMux4Way(in=efgh, sel=sel[0..1], a=e, b=f, c=g, d=h);
+}
+```
 
 ## Preguntas adicioinales
 
