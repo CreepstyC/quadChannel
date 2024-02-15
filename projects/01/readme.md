@@ -135,9 +135,9 @@ CHIP And16
     And(a=a[15], b=b[15], out=out[15]);
 }
 ```
+
 ## OR16:
 Un Chip Or de 16 bits aplica la operación booleana Or a cada uno de los bits de su bus de entrada de 16 bits.
-
 
 ```
 {
@@ -163,6 +163,7 @@ Un Chip Or de 16 bits aplica la operación booleana Or a cada uno de los bits de
     Or(a=a[15], b=b[15], out=out[15]);
 }
 ```
+
 ## Mux16:
 Un multiplexor de 16 bits es casi similar al Chip Multiplexor descrito anteriormente, excepto que ambas entradas son cada una de 16 bits de ancho, mientras que el selector es de un solo bit.
 
@@ -190,6 +191,7 @@ CHIP Mux16 {
     Mux(a=a[15], b=b[15], sel=sel, out=out[15]);
 }
 ```
+
 ## Or8Way:
 Una puerta Or de 8 vías da como resultado 1 cuando al menos un bit de su entrada de 16 bits es 1. A diferencia de las puertas lógicas de entrada de n bits, las puertas lógicas de n vías utilizan la misma salida de forma iterativa a lo largo de la operación booleana, lo que significa que utiliza la salida anterior como entrada para la siguiente operación booleana similar.
 ```
@@ -207,6 +209,10 @@ CHIP Or8Way {
     Or(a=o6, b=in[7], out=out);
 }
 ```
+
+<p align="center" style="background-color: white;">
+  <img src="https://nand2tetris-hdl.github.io/img/or8.png" width="350">
+</p>
 
 ## Preguntas adicioinales
 
@@ -228,16 +234,9 @@ CHIP Or8Way {
 
 - in-addr
 
-- nandgame
-
 - hackaday
 
 ## Bibliografía
 [The elements of computing systems](https://www.nand2tetris.org/book)
 
 [Apéndice 2: Guía HDL](https://drive.google.com/file/d/1dPj4XNby9iuAs-47U9k3xtYy9hJ-ET0T/view?usp=sharing)
-------> Click en la imagen para mejor visualización <------
-<p align="center" style="background-color: white;">
-  <img src="https://nand2tetris-hdl.github.io/img/or8.png" width="250">
-</p>
-
