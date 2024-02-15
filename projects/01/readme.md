@@ -104,7 +104,7 @@ CHIP Mux {
     Or(a=and1, b=and2, out=out);
 }
 ```
-##And16
+## And16
 Un chip And de 16 bits aplica la operación booleana And a cada uno de los bits de su bus de entrada de 16 bits, se toma como base la compuerta And creada anteriormente.
 
 ```
@@ -132,7 +132,7 @@ CHIP And16
     And(a=a[15], b=b[15], out=out[15]);
 }
 ```
-##OR16:
+## OR16:
 Un Chip Or de 16 bits aplica la operación booleana Or a cada uno de los bits de su bus de entrada de 16 bits.
 
 
@@ -160,7 +160,7 @@ Un Chip Or de 16 bits aplica la operación booleana Or a cada uno de los bits de
     Or(a=a[15], b=b[15], out=out[15]);
 }
 ```
-##Mux16:
+## Mux16:
 Un multiplexor de 16 bits es casi similar al Chip Multiplexor descrito anteriormente, excepto que ambas entradas son cada una de 16 bits de ancho, mientras que el selector es de un solo bit.
 
 ```
@@ -187,7 +187,7 @@ CHIP Mux16 {
     Mux(a=a[15], b=b[15], sel=sel, out=out[15]);
 }
 ```
-##Or8Way:
+## Or8Way:
 Una puerta Or de 8 vías da como resultado 1 cuando al menos un bit de su entrada de 16 bits es 1. A diferencia de las puertas lógicas de entrada de n bits, las puertas lógicas de n vías utilizan la misma salida de forma iterativa a lo largo de la operación booleana, lo que significa que utiliza la salida anterior como entrada para la siguiente operación booleana similar.
 ```
 CHIP Or8Way {
