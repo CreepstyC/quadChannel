@@ -144,6 +144,26 @@ CHIP ALU {
 }
 ```
 
+## Preguntas adicionales
+
+1. **¿Cuál es el objetivo de cada uno de estos proyectos con sus palabras y describa que debe hacer para desarrollarlo?**
+
+    Una de las principales cosas que se pueden desarrollar con los proyectos realizados hasta el momento es una mejor lógica booleana, aritmética, secuencial y general, por lo que uno de los principales objetivos es aumentar la capacidad de resolución de problemas. Esto sumado a la intención de enseñar el funcionamiento y la estructura de un computador, para su posterior creación.
+
+    Para llevar a cabo satisfactoriamente estos proyectos es necesario estudiar la representación de números binarios y sus operaciones, junto al conocimiento de lógica aritmética, booleana y secuencial.
+
+2. **Explique las principales diferencias entre la lógica aritmética y la lógica secuencial.**
+    
+    La lógica aritmética se centra en realizar cálculos numéricos con operaciones matemáticas y aritméticas. Al pasar a la lógica secuencial se debe tener en cuenta el momento en el que se realizan eventos o acciones en un sistema digital, es decir, hay una memoria, contador o máquina de estado presente.
+
+    **Bonus: ¿Qué tipo de unidades aritmético lógicas existen?**
+
+    Algunas de las ALU's mas importantes que existen son:
+
+    * **ALU** general: es la mas común y se usa para operaciones aritméticas y lógicas básicas.
+    * **ALU FPU**: Se usa en operaciones con números de punto flotante (con parte decimal).
+    * **ALU SIMD**: (Single Instruction, Multiple Data). Ejecuta la misma operación en múltiples datos a la vez.
+
 ## Bibliografía
 [The elements of computing systems](https://www.nand2tetris.org/book)
 
