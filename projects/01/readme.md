@@ -1,4 +1,4 @@
-# Desarrollo
+# Desarrollo (Práctica 1)
 
 En este proyecto se realiza la construcción de un conjunto de compuertas lógicas que nos ayudarán mas adelante en la construcción de otros componentes importantes que conforman la estructura de un computador.
 
