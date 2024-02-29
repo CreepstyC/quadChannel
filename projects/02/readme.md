@@ -91,6 +91,8 @@ Principalmente, para hacer cero y negar las variables *x* y *y*, se usan compuer
 
 Nuevamente la compuerta Mux selecciona el tipo de operación que se realizara sobre *x* y *y*, siendo las entradas *a*, *b* y *sel*, las operaciones And, Add y la entrada *f*, respectivamente.
 
+La salida final, se niega de ser necesario con la compuerta Mux y se muestra el resultado final. Consecuentemente, para conocer ng se toma el último elemento en la cadena del resultado de 16 bits, puesto que según la estructura del complemento a dos (two's complement) de ser 1 corresponde a un número negativo y 0 a un número positivo. Finalmente, se comprueba que cada elemento en la cadena final corresponda a cero con múltiples compuertas Or, si el resultado de esto es 0, se niega y *zr* valdría 1.
+
 <p align='center'>
 <img src="imgs/ALUTable.png" width="400">
 </p>
