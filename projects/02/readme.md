@@ -143,6 +143,93 @@ CHIP ALU {
     Not(in=notZr, out=zr);
 }
 ```
+## RAM512
+
+La memoria RAM512 consta de ocho unidades RAM64, cada una compuesta por ocho bloques RAM8, y cada bloque RAM8 incorpora ocho registros de 16 bits. En total, hay 512 registros capaces de almacenar 1 KB de datos. Para la implementación se utiliza un demultiplexor 8-vías para dividir la señal de carga en ocho señales diferentes (a, b, ..., h) basadas en los tres bits de la dirección address[6..8]. Se instancian ocho bloques de memoria RAM64, cada uno operando en una parte diferente de la memoria total, y se conectan a las salidas del demultiplexor. Por último, Un multiplexor 8-vías elige el resultado correcto de los bloques RAM64 basándose en la dirección address[6..8].
+
+```
+CHIP RAM512 {
+    IN in[16], load, address[9];
+    OUT out[16];
+
+    PARTS:
+       DMux8Way(in=load,sel=address[6..8],a=a,b=b,c=c,d=d,e=e,f=f,g=g,h=h);
+
+        RAM64(in=in,load=a,address=address[0..5],out=oa);
+        RAM64(in=in,load=b,address=address[0..5],out=ob);
+        RAM64(in=in,load=c,address=address[0..5],out=oc);
+        RAM64(in=in,load=d,address=address[0..5],out=od);
+        RAM64(in=in,load=e,address=address[0..5],out=oe);
+        RAM64(in=in,load=f,address=address[0..5],out=of);
+        RAM64(in=in,load=g,address=address[0..5],out=og);
+        RAM64(in=in,load=h,address=address[0..5],out=oh);
+
+	Mux8Way16(a=oa,b=ob,c=oc,d=od,e=oe,f=of,g=og,h=oh,sel=address[6..8],out=out);
+}
+```
+## RAM4K
+
+La RAM4K tiene la capacidad de almacenar 4 kilobytes (4096 bytes) de datos por lo que cada celda de memoria puede contener 16 bits de información. Podría constar de múltiples unidades de memoria más pequeñas, como RAM512 o RAM64, para alcanzar la capacidad total de 4 kilobytes.  Para la implementación se utiliza un demultiplexor 8-vías para seleccionar uno de los 8 bloques de RAM512 luego se instancian ocho bloques de RAM512, cada uno operando en una parte diferente de la memoria y por último un multiplexor 8-vías elige el resultado correcto de los bloques RAM512 basándose en la dirección. 
+
+```
+CHIP RAM4K {
+    IN in[16], load, address[12];
+    OUT out[16];
+
+    PARTS:
+    DMux8Way(in=load,sel=address[9..11],a=a,b=b,c=c,d=d,e=e,f=f,g=g,h=h);
+
+    RAM512(in=in,load=a,address=address[0..8],out=oa);
+    RAM512(in=in,load=b,address=address[0..8],out=ob);
+    RAM512(in=in,load=c,address=address[0..8],out=oc);
+    RAM512(in=in,load=d,address=address[0..8],out=od);
+    RAM512(in=in,load=e,address=address[0..8],out=oe);
+    RAM512(in=in,load=f,address=address[0..8],out=of);
+    RAM512(in=in,load=g,address=address[0..8],out=og);
+    RAM512(in=in,load=h,address=address[0..8],out=oh);
+
+    Mux8Way16(a=oa,b=ob,c=oc,d=od,e=oe,f=of,g=og,h=oh,sel=address[9..11],out=out);
+}
+```
+## RAM16K:
+
+RAM16K está diseñado para gestionar una memoria RAM de 16 kilobytes, utilizando bloques de memoria RAM4K para dividir y direccionar eficientemente la capacidad total. Para su implementación se utiliza un demultiplexor 4-vías para dividir la señal de carga en cuatro señales diferentes (loada, loadb, loadc, loadd) basadas en los dos bits de la dirección address[12..13], se instancian cuatro bloques de memoria RAM4K, cada uno operando en una parte diferente de la memoria total, y se conectan a las salidas del demultiplexor. Por último, Un multiplexor 4-vías elige el resultado correcto de los bloques RAM4K basándose en la dirección address[12..13].
+
+```
+CHIP RAM16K {
+    IN in[16], load, address[14];
+    OUT out[16];
+
+    PARTS:
+        DMux4Way(in=load, sel=address[12..13], a=loada, b=loadb, c=loadc, d=loadd);
+	RAM4K(in=in, load=loada, address=address[0..11], out=outa);
+	RAM4K(in=in, load=loadb, address=address[0..11], out=outb);
+	RAM4K(in=in, load=loadc, address=address[0..11], out=outc);
+	RAM4K(in=in, load=loadd, address=address[0..11], out=outd);
+	Mux4Way16(a=outa, b=outb, c=outc, d=outd, sel=address[12..13], out=out);	
+}
+```
+## PC:
+El PC se comporta como un contador que puede cargar, incrementar y resetear su valor. La salida representa la dirección de la próxima instrucción que el procesador debe ejecutar. Este diseño modular permite un control flexible del flujo de ejecución en un programa almacenado en memoria. Para su implementación, el componente Inc16 es un contador que se encarga de incrementar su entrada en 1, se utiliza un multiplexor (Mux16) para decidir entre la entrada incrementada (out1) y el valor actual del PC (loop). Otro multiplexor decide entre la entrada incrementada y la entrada in, basándose en la señal de carga (load). Un tercer multiplexor decide entre la entrada cargada y un valor falso (false) cuando se activa la señal de reset (reset). Por último, se utiliza un registro (Register) para almacenar el valor resultante después de todas las decisiones anteriores.
+
+```
+CHIP PC {
+    IN in[16],inc, load, reset;
+    OUT out[16];
+    
+    PARTS:
+    Inc16(in=loop,out=out1);
+
+    Mux16(a=loop,b=out1,sel=inc,out=incout);
+    Mux16(a=incout,b=in,sel=load,out=loadout);
+    Mux16(a=loadout,b=false,sel=reset,out=regout);
+
+    Register(in=regout,load=true,out=loop,out=out);
+}
+
+```
+
+
 
 ## Preguntas adicionales
 
