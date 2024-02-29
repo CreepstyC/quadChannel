@@ -229,7 +229,7 @@ CHIP PC {
 
 ```
 <p align='center'>
-<img src="imgs/pc.png" width="200">
+<img src="imgs/pc.png" width="300">
 </p>
 
 
