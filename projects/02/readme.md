@@ -143,6 +143,23 @@ CHIP ALU {
     Not(in=notZr, out=zr);
 }
 ```
+## DFF
+
+Puede almacenar un bit de información, y mantenerlo hasta que se le de una señal que le indique un cambio de estado, es considerado un chip basico o primitivo y se utiliza en la construccion de muchos otros circuitos digitales. 
+
+## BIT
+Se construye a base de un MUX y un DFF, este representa un bit de información ya sea 1 ó 0, este es utilizado para la construcción de registros, las memorias.
+
+## REGISTER
+Para su construcción utilizamos 16 bits, su función es almacenar y mantener un conjunto de bits de información los cuales estarán disponibles para lectura y escritura, según sea el requerimiento.
+
+## RAM8
+Se refiere a una memoria de acceso aleatorio, tiene la capacidad de almacenar datos de 16 bits en cada ubicación de memoria y cuenta con 8 registros para el almacenamiento temporal de datos, básicamente esta memoria RAM de 16 bits significa que cada ubicación de memoria puede almacenar un numero binario de 16 bits que puede representar valores enteros entre 0 y 65535.
+
+## RAM64
+
+Se refiere a una memoria de acceso aleatorio que tiene la capacidad de almacenar datos de 16 bits, en cada ubicación de memoria y cuenta con 64 registros esta memoria puede almacenar un numero binario de 16 bits y entre 0 a 65535.
+
 ## RAM512
 
 La memoria RAM512 consta de ocho unidades RAM64, cada una compuesta por ocho bloques RAM8, y cada bloque RAM8 incorpora ocho registros de 16 bits. En total, hay 512 registros capaces de almacenar 1 KB de datos. Para la implementación se utiliza un demultiplexor 8-vías para dividir la señal de carga en ocho señales diferentes (a, b, ..., h) basadas en los tres bits de la dirección address[6..8]. Se instancian ocho bloques de memoria RAM64, cada uno operando en una parte diferente de la memoria total, y se conectan a las salidas del demultiplexor. Por último, Un multiplexor 8-vías elige el resultado correcto de los bloques RAM64 basándose en la dirección address[6..8].
