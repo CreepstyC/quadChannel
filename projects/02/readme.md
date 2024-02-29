@@ -144,13 +144,22 @@ CHIP ALU {
 }
 ```
 ## DFF
+<p align='center'>
+<img src="imgs/dff.png" width="250">
+</p>
 
 Puede almacenar un bit de información, y mantenerlo hasta que se le de una señal que le indique un cambio de estado, es considerado un chip basico o primitivo y se utiliza en la construccion de muchos otros circuitos digitales. 
 
 ## BIT
+<p align='center'>
+<img src="imgs/bit.png" width="250">
+</p>
 Se construye a base de un MUX y un DFF, este representa un bit de información ya sea 1 ó 0, este es utilizado para la construcción de registros, las memorias.
 
 ## REGISTER
+<p align='center'>
+<img src="imgs/register.png" width="250">
+</p>
 Para su construcción utilizamos 16 bits, su función es almacenar y mantener un conjunto de bits de información los cuales estarán disponibles para lectura y escritura, según sea el requerimiento.
 
 ## RAM8
