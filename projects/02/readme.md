@@ -87,8 +87,12 @@ CHIP Inc16 {
 
 ## ALU
 
+Principalmente, para hacer cero y negar las variables *x* y *y*, se usan compuertas Mux, cuya entrada *sel* corresponde a las entradas *zx*, *nx*, *zy* y *ny* que varían respectivamente el valor.
+
+Nuevamente la compuerta Mux selecciona el tipo de operación que se realizara sobre *x* y *y*, siendo las entradas *a*, *b* y *sel*, las operaciones And, Add y la entrada *f*, respectivamente.
+
 <p align='center'>
-<img src="imgs/ALUTable.png" width="500">
+<img src="imgs/ALUTable.png" width="400">
 </p>
 
 ```
