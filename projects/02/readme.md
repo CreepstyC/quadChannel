@@ -228,7 +228,9 @@ CHIP PC {
 }
 
 ```
-
+<p align='center'>
+<img src="imgs/pc.png" width="200">
+</p>
 
 
 ## Preguntas adicionales
