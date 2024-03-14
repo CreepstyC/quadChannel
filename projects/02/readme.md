@@ -279,6 +279,12 @@ CHIP PC {
     * **ALU FPU**: Se usa en operaciones con números de punto flotante (con parte decimal).
     * **ALU SIMD**: (Single Instruction, Multiple Data). Ejecuta la misma operación en múltiples datos a la vez.
 
+## Equipo
+
+- [@creepstyC](https://github.com/creepstyC)
+- [@DieDev9](https://github.com/DieDev9)
+- [@andr3sit011](https://github.com/%20andr3sit011e)
+
 ## Bibliografía
 [The elements of computing systems](https://www.nand2tetris.org/book)
 

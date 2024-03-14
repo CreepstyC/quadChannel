@@ -216,6 +216,7 @@ CHIP Or8Way {
 
 ## Mux4Way16:
 Un multiplexor con m vías y n bits permite seleccionar una de varias entradas de datos y dirigirla a una salida en función del selector. En este caso el multiplexor cuenta con 4 entradas, cada una de ellas con 16 bits.
+
 ```
 CHIP Mux4Way16 {
     IN a[16], b[16], c[16], d[16], sel[2];
@@ -227,8 +228,10 @@ CHIP Mux4Way16 {
 	Mux16(a=ab, b=cd, sel=sel[1], out=out);
 }
 ```
+
 ## Mux8Way16:
 Un chip Mux8Way16 tiene un funcionamiento similar al Mux4Way16, solo que este cuenta con el doble de entradas con la misma cantidad de bits para cada una.
+
 ```
 CHIP Mux8Way16 {
     IN a[16], b[16], c[16], d[16],
@@ -242,8 +245,10 @@ CHIP Mux8Way16 {
     Mux16(a=abcd, b=efgh, sel=sel[2], out=out);
 }
 ```
+
 ## DMux4Way:
 Un demultiplexor de m vías funciona de manera contraria a como lo hace un multiplexor de m vías, ya que el demultiplexor se encarga de tomar una entrada y distribuirla en una de las m salidas posibles.
+
 ```
 CHIP DMux4Way {
     IN in, sel[2];
@@ -255,8 +260,10 @@ CHIP DMux4Way {
 	DMux(in=bo,sel=sel[0],a=c,b=d);
 }
 ```
+
 ## DMux8Way:
 Funciona de la misma forma que un DMux4Way, solo que este distribuye una entrada en 8 posibles salidas en lugar de 4.
+
 ```
 CHIP DMux8Way {
     IN in, sel[3];
@@ -288,8 +295,14 @@ CHIP DMux8Way {
 - **Circuitos integrados:** de manera práctica, se puede aprender sobre el funcionamiento de las compuertas lógicas y su implementación utilizando circuitos integrados que las contienen para construir otras más complejas o incluso con el uso de transistores.
 
 - in-addr
-
 - hackaday
+
+## Equipo
+
+- [@creepstyC](https://github.com/creepstyC)
+- [@DieDev9](https://github.com/DieDev9)
+- [@andr3sit011](https://github.com/%20andr3sit011e)
+- [@reinaldocardenas23](https://github.com/reinaldocardenas23)
 
 ## Bibliografía
 [The elements of computing systems](https://www.nand2tetris.org/book)
