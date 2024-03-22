@@ -1,10 +1,8 @@
 # Desarrollo (Práctica 3)
 
-## Proyecto 04
-
 ### Objetivo
 
-EL objetivo del proyecto #4 es crear programas que nos ayuden a comprender y a familiarizarnos con la programación a bajo nivel.
+El objetivo del proyecto #4 es crear programas que nos ayuden a comprender y a familiarizarnos con la programación a bajo nivel.
 
 ### Fill
 
