@@ -1,9 +1,5 @@
 # Desarrollo (Práctica 5)
 
-### Objetivo
-
-
-
 ## Preguntas adicionales
 
 1. **Teniendo en cuenta el marco de estas dos prácticas que son las máquinas virtuales. ¿Cuál cree que es el futuro de las máquinas virtuales?**
@@ -17,8 +13,6 @@
 3. **¿Cual es la ventaja del contenedor respecto a la máquina virtual?**
 
    **Un contenedor tiene varias ventajas sobre las maquinas virtuales unas de ellas serian: menos recursos y ahorro en costos, velocidad en iteración, ecosistema estable. Es importante tener en cuenta que, aunque los contenedores tienen muchas ventajas, no siempre son la mejor opción para todas las situaciones. Las máquinas virtuales todavía tienen su lugar, especialmente en situaciones donde se necesita un aislamiento completo del sistema operativo host**
-
-    
 
 ## Equipo
 
