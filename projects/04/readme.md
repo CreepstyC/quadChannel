@@ -1,7 +1,5 @@
 # Desarrollo (Práctica 4)
 
-### Objetivo
-
 
 
 ## Preguntas adicionales
