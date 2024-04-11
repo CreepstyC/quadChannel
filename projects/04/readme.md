@@ -21,5 +21,3 @@ ademas de su control de bajo nivel, su importancia en la informatica actual**
 - [@DieDev9](https://github.com/DieDev9)
 - [@andr3sit011](https://github.com/%20andr3sit011e)
 - [@reinaldocardenas23](https://github.com/reinaldocardenas23)
-
-## Bibliografía
