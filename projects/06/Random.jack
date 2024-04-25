@@ -1,0 +1,31 @@
+/**
+ * Generador de números aleatorios
+ *  Este es un pseudo generador de números aleatorios que usa
+ * Linear Congruential Generator (LCG) para generar números aleatorios..
+ */
+
+class Random {
+	static int x;
+
+	/** Establece una nueva semilla mod 16. */
+	function void seed(int seed) {
+		let x = Math.mod(seed, 16);
+		return;
+	}
+
+	/** Devuelve el siguiente número aleatorio. Puede ser negativo o positivo. */
+	function int next() {
+		let x = 7919 + (17*x);
+		return x;
+	}
+
+	/** Devuelve un valor aleatorio entre x (incluido) e y (no incluido)
+	 *  y debe ser mayor que x. */
+	function int between(int x, int y) {
+		var int diff, res;
+		let diff = y - x + 1;
+		let res = Math.mod(Random.next(), diff) + x;
+		if (res = y) { let res = res - 1; }
+		return res * 16;
+	}
+}

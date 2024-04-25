@@ -1,0 +1,10 @@
+/** Inicializa un nuevo juego de Serpiente y comienza a ejecutarlo */
+class Main {
+	function void main() {
+		var SnakeGame game;
+		let game = SnakeGame.new();
+		do game.run();
+		do game.dispose();
+		return;
+   }
+}
