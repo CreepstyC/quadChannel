@@ -1,6 +1,7 @@
 # Desarrollo (Práctica 7)
 
 ## Videos
+Reinaldo Cárdenas Tirado: https://youtu.be/OTunCSNrj9s
 
 ## Equipo
 
