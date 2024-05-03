@@ -1,8 +1,8 @@
 # Desarrollo (Práctica 7)
 
 ## Videos
-Reinaldo Cárdenas Tirado: https://youtu.be/OTunCSNrj9s
-Marlon Barajas Acelas: https://youtu.be/lUUGAxYBBE4
+- Reinaldo Cárdenas Tirado: https://youtu.be/OTunCSNrj9s
+- Marlon Barajas Acelas: https://youtu.be/lUUGAxYBBE4
 
 ## Equipo
 
