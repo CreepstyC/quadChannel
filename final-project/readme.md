@@ -7,8 +7,6 @@
 ## Presentación en video
 [Consumo de energía en sistemas de cómputo](https://www.youtube.com/watch?v=SwpbAph4-1o)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/SwpbAph4-1o?si=R4PbBON8LMGOmOVj"></iframe>
-
 ## Equipo
 
 - [@creepstyC](https://github.com/creepstyC)
