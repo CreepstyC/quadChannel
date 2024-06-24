@@ -7,7 +7,7 @@
 ## Presentación en video
 [Consumo de energía en sistemas de cómputo](https://www.youtube.com/watch?v=SwpbAph4-1o)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/SwpbAph4-1o?si=R4PbBON8LMGOmOVj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/SwpbAph4-1o?si=R4PbBON8LMGOmOVj"></iframe>
 
 ## Equipo
 
